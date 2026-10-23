@@ -1,0 +1,88 @@
+package com.example.composepractica.composable
+
+
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.composepractica.R
+
+@Composable
+@Preview
+fun TarjetaOferta() {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp)
+            .clip(RoundedCornerShape(12.dp))
+            .background(Color.White)
+            .padding(12.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        Box {
+            Image(
+                painter = painterResource(R.drawable.foto1),
+                contentDescription = "Smartwatch",
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(200.dp),
+                contentScale = ContentScale.Fit
+            )
+
+            Text(
+                text = "-25 %",
+                modifier = Modifier
+                    .align(Alignment.TopStart)
+                    .background(
+                        Color.Red,
+                        RoundedCornerShape(6.dp)
+                    )
+                    .padding(
+                        horizontal = 10.dp,
+                        vertical = 6.dp
+                    ),
+                color = Color.White,
+                fontSize = 14.sp
+            )
+        }
+
+        Text(
+            text = "Smartwatch Active",
+            fontSize = 20.sp
+        )
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = "80 €",
+                textDecoration = TextDecoration.LineThrough,
+                color = Color.Gray
+            )
+            Text(
+                text = "60 €",
+                fontSize = 20.sp,
+                color = Color.Red
+            )
+        }
+    }
+}
