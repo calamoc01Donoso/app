@@ -39,6 +39,7 @@ fun TarjetaPresentacion() {
             contentDescription = "Foto de Ina",
             modifier = Modifier
                 .size(100.dp)
+                //recorta en forma perfecto en circulo
                 .clip(CircleShape),
             contentScale = ContentScale.Crop
         )

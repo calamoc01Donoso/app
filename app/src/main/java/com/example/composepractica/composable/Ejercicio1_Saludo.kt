@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.sp
 @Composable
 @Preview
 fun MiSaludo() {
+    //Columnas
     Column(
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally,

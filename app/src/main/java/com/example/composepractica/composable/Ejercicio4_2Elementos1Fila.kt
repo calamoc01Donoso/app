@@ -14,6 +14,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 @Preview
 fun DosElementos() {
+    //Filas
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(16.dp),

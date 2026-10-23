@@ -28,6 +28,7 @@ fun TarjetaColor() {
         modifier = Modifier
             .background(
                 Color(0xFFDBEAFE),
+                //redondear esquina
                 RoundedCornerShape(12.dp)
             )
             .padding(16.dp),

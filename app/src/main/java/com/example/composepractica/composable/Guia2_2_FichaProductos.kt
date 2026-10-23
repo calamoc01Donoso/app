@@ -42,6 +42,7 @@ fun FichaProducto() {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(160.dp),
+            //escalar imagen uniforme
             contentScale = ContentScale.Fit
         )
 
